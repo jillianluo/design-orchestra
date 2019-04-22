@@ -39,6 +39,9 @@ var waveY4 = [];
 var byColumn4 = 150;
 var byFrame4 = 250;
 
+var cueTime = [];
+var cued = false;
+
 //switch to play screen when button is pushed
 var playbutton = document.getElementById("playkey");
 playbutton.addEventListener("click", switchtoPlay);
@@ -53,12 +56,15 @@ function switchtoPlay() {
     background(240);
     console.log(compose);
     console.log(play);
+    for (let i = 0; i < xPos.length; i++) {
+        cueTime[i] = map(xPos[i], 0, windowWidth, 0, 300);
+    }
+    console.log(cueTime);
 }
 
 //canvas
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    start = color(250);
     waveColor1 = color(224, 190, 54);
     waveColor2 = color(160, 202, 146);
     waveColor3 = color(117, 176, 156);
@@ -186,6 +192,38 @@ function draw() {
             //line(waveX4[i], waveY4[i] - 100, waveX4[i], waveY4[i] + 100);
         }
 
+        //draw icons
+        for (let i = 0; i < xPos.length; i++) {
+            cueTime[i] = map(xPos[i], 0, windowWidth, 0, 1000);
+            if (abs(cueTime[i] - runTime) <= 30) {
+                cued = true;
+            }
+            if (cued) {
+                if (yPos[i] == L1y) {
+                    noStroke();
+                    fill(251, 139, 36);
+                    ellipse(xPos[i], yPos[i], 50, 50);
+                }
+                if (yPos[i] == L2y) {
+                    noStroke();
+                    fill(80, 180, 200);
+                    ellipse(xPos[i], yPos[i], 50, 50);
+                }
+                if (yPos[i] == L3y) {
+                    noStroke();
+                    fill(44, 165, 141);
+                    ellipse(xPos[i], yPos[i], 50, 50);
+                }
+                if (yPos[i] == L4y) {
+                    noStroke();
+                    fill(200, 100, 150);
+                    ellipse(xPos[i], yPos[i], 50, 50);
+                }
+                if (frameCount - cueTime[i] > 45) {
+                    cued = false;
+                }
+            }
+        }
     }
 }
 

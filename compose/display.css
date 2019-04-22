@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#playkey {
+    width: 10%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: indianred;
+    cursor: pointer;
+    position: relative;
+    top: 750px;
+    font-size: 2em;
+}

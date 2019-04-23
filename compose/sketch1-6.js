@@ -50,6 +50,9 @@ playbutton.addEventListener("click", switchtoPlay);
 
 function preload() {
     bird1 = loadImage('assets/bird1.png');
+    bird2 = loadImage('assets/bird2.png');
+    bird3 = loadImage('assets/bird3.png');
+    bird4 = loadImage('assets/bird4.png');
 }
 
 function switchtoPlay() {
@@ -94,19 +97,19 @@ function draw() {
         for (let i = 0; i < xPos.length; i++) {
             noStroke();
             if (yPos[i] == L1y) {
-                fill(251, 139, 36);
+                image(bird1, xPos[i], yPos[i], 100, 100);
             }
             if (yPos[i] == L2y) {
-                fill(80, 180, 200);
+                image(bird2, xPos[i], yPos[i], 100, 100);
             }
             if (yPos[i] == L3y) {
-                fill(44, 165, 141);
+                image(bird3, xPos[i], yPos[i], 100, 100);
             }
             if (yPos[i] == L4y) {
-                fill(200, 100, 150);
+                image(bird4, xPos[i], yPos[i], 100, 100);
             }
-            ellipse(xPos[i], yPos[i], 50, 50);
-            image(bird1, xPos[i], yPos[i], 100, 100);
+            //ellipse(xPos[i], yPos[i], 50, 50);
+
         }
     }
 

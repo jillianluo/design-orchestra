@@ -213,18 +213,30 @@ function draw() {
             if (cued) {
                 if (yPos[i] == L1y) {
                     if (cueTime[i] - runTime > 0) {
-                        opa = round(map(cueTime[i] - runTime, 30, 0, 0, 255));
+                        opa = round(map(cueTime[i] - runTime, 60, 0, 0, 255));
                         tint(255, opa);
                     }
                     image(bird1, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L2y) {
+                    if (cueTime[i] - runTime > 0) {
+                        opa = round(map(cueTime[i] - runTime, 60, 0, 0, 255));
+                        tint(255, opa);
+                    }
                     image(bird2, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L3y) {
+                    if (cueTime[i] - runTime > 0) {
+                        opa = round(map(cueTime[i] - runTime, 60, 0, 0, 255));
+                        tint(255, opa);
+                    }
                     image(bird3, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L4y) {
+                    if (cueTime[i] - runTime > 0) {
+                        opa = round(map(cueTime[i] - runTime, 60, 0, 0, 255));
+                        tint(255, opa);
+                    }
                     image(bird4, xPos[i], yPos[i]);
                 }
                 if (frameCount - cueTime[i] > 45) {

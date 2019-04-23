@@ -65,6 +65,7 @@ function switchtoPlay() {
 //canvas
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    bird1 = loadImage('assets/bird1.png');
     waveColor1 = color(224, 190, 54);
     waveColor2 = color(160, 202, 146);
     waveColor3 = color(117, 176, 156);
@@ -99,6 +100,7 @@ function draw() {
                 fill(200, 100, 150);
             }
             ellipse(xPos[i], yPos[i], 50, 50);
+            image(bird1, xPos[i], yPos[i]);
         }
     }
 

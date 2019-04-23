@@ -212,24 +212,16 @@ function draw() {
             }
             if (cued) {
                 if (yPos[i] == L1y) {
-                    noStroke();
-                    fill(251, 139, 36);
-                    ellipse(xPos[i], yPos[i], 50, 50);
+                    image(bird1, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L2y) {
-                    noStroke();
-                    fill(80, 180, 200);
-                    ellipse(xPos[i], yPos[i], 50, 50);
+                    image(bird2, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L3y) {
-                    noStroke();
-                    fill(44, 165, 141);
-                    ellipse(xPos[i], yPos[i], 50, 50);
+                    image(bird3, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L4y) {
-                    noStroke();
-                    fill(200, 100, 150);
-                    ellipse(xPos[i], yPos[i], 50, 50);
+                    image(bird4, xPos[i], yPos[i]);
                 }
                 if (frameCount - cueTime[i] > 45) {
                     cued = false;

@@ -42,9 +42,15 @@ var byFrame4 = 250;
 var cueTime = [];
 var cued = false;
 
+var bird1;
+
 //switch to play screen when button is pushed
 var playbutton = document.getElementById("playkey");
 playbutton.addEventListener("click", switchtoPlay);
+
+function preload() {
+    bird1 = loadImage('assets/bird1.png');
+}
 
 function switchtoPlay() {
     compose = false;
@@ -65,12 +71,12 @@ function switchtoPlay() {
 //canvas
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    bird1 = loadImage('assets/bird1.png');
     waveColor1 = color(224, 190, 54);
     waveColor2 = color(160, 202, 146);
     waveColor3 = color(117, 176, 156);
     waveColor4 = color(166, 100, 64);
     strokeWeight(3);
+    imageMode(CENTER);
 }
 
 function draw() {
@@ -100,7 +106,7 @@ function draw() {
                 fill(200, 100, 150);
             }
             ellipse(xPos[i], yPos[i], 50, 50);
-            image(bird1, xPos[i], yPos[i]);
+            image(bird1, xPos[i], yPos[i], 100, 100);
         }
     }
 

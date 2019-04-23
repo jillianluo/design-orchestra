@@ -42,7 +42,7 @@ var byFrame4 = 250;
 var cueTime = [];
 var cued = false;
 
-var bird1;
+var opacity;
 
 //switch to play screen when button is pushed
 var playbutton = document.getElementById("playkey");
@@ -212,6 +212,9 @@ function draw() {
             }
             if (cued) {
                 if (yPos[i] == L1y) {
+                    if (cueTime[i] - runTime > 0) {
+                        tint(255, map(cueTime[i] - runTime, 30, 0, 0, 255));
+                    }
                     image(bird1, xPos[i], yPos[i]);
                 }
                 if (yPos[i] == L2y) {

@@ -207,13 +207,14 @@ function draw() {
         //draw icons
         for (let i = 0; i < xPos.length; i++) {
             cueTime[i] = map(xPos[i], 0, windowWidth, 0, 1000);
-            if (abs(cueTime[i] - runTime) <= 30) {
+            if (abs(cueTime[i] - runTime) <= 60) {
                 cued = true;
             }
             if (cued) {
                 if (yPos[i] == L1y) {
                     if (cueTime[i] - runTime > 0) {
-                        tint(255, map(cueTime[i] - runTime, 30, 0, 0, 255));
+                        opa = round(map(cueTime[i] - runTime, 30, 0, 0, 255));
+                        tint(255, opa);
                     }
                     image(bird1, xPos[i], yPos[i]);
                 }

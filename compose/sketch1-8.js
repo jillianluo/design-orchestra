@@ -48,6 +48,8 @@ var opacity;
 var playbutton = document.getElementById("playkey");
 playbutton.addEventListener("click", switchtoPlay);
 
+window.addEventListener('touchstart', touched);
+
 function preload() {
     bird1 = loadImage('assets/bird1.png');
     bird2 = loadImage('assets/bird2.png');
@@ -83,7 +85,6 @@ function setup() {
 }
 
 function draw() {
-    console.log(touches);
     if (compose) {
         background(250);
         stroke(waveColor1);
@@ -112,11 +113,6 @@ function draw() {
             //ellipse(xPos[i], yPos[i], 50, 50);
 
         }
-    }
-
-    if (touches == 1) {
-        touched();
-        console.log("touched");
     }
 
     if (play) {

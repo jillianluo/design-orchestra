@@ -73,6 +73,58 @@ function switchtoPlay() {
     console.log(cueTime);
 }
 
+function touched() {
+    if (compose) {
+        //deleting notes
+        for (let i = 0; i < xPos.length; i++) {
+            if (dist(mouseX, mouseY, xPos[i], yPos[i]) < 25) {
+                xPos.splice(i, 1);
+                yPos.splice(i, 1);
+                add = false;
+            }
+        }
+        //adding notes
+        if (add) {
+            //decide the note goes on which line
+            if (mouseY > L1y - 50 && mouseY < L1y + 50) {
+                placed = true;
+                L1 = true;
+            } else if (mouseY > L2y - 50 && mouseY < L2y + 50) {
+                placed = true;
+                L2 = true;
+            } else if (mouseY > L3y - 50 && mouseY < L3y + 50) {
+                placed = true;
+                L3 = true;
+            } else if (mouseY > L4y - 50 && mouseY < L4y + 50) {
+                placed = true;
+                L4 = true;
+            }
+            //add x and y position to the array, align y position on the line
+            if (placed) {
+                xPos.push(mouseX);
+                if (L1) {
+                    yPos.push(L1y);
+                } else if (L2) {
+                    yPos.push(L2y);
+                } else if (L3) {
+                    yPos.push(L3y);
+                } else if (L4) {
+                    yPos.push(L4y);
+                }
+                placed = false;
+                L1 = false;
+                L2 = false;
+                L3 = false;
+                L4 = false;
+            }
+
+        }
+        console.log(xPos);
+        console.log(yPos);
+        add = true;
+    }
+}
+
 //canvas
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -248,56 +300,5 @@ function draw() {
     }
 }
 
-function touched() {
-    if (compose) {
-        //deleting notes
-        for (let i = 0; i < xPos.length; i++) {
-            if (dist(mouseX, mouseY, xPos[i], yPos[i]) < 25) {
-                xPos.splice(i, 1);
-                yPos.splice(i, 1);
-                add = false;
-            }
-        }
-        //adding notes
-        if (add) {
-            //decide the note goes on which line
-            if (mouseY > L1y - 50 && mouseY < L1y + 50) {
-                placed = true;
-                L1 = true;
-            } else if (mouseY > L2y - 50 && mouseY < L2y + 50) {
-                placed = true;
-                L2 = true;
-            } else if (mouseY > L3y - 50 && mouseY < L3y + 50) {
-                placed = true;
-                L3 = true;
-            } else if (mouseY > L4y - 50 && mouseY < L4y + 50) {
-                placed = true;
-                L4 = true;
-            }
-            //add x and y position to the array, align y position on the line
-            if (placed) {
-                xPos.push(mouseX);
-                if (L1) {
-                    yPos.push(L1y);
-                } else if (L2) {
-                    yPos.push(L2y);
-                } else if (L3) {
-                    yPos.push(L3y);
-                } else if (L4) {
-                    yPos.push(L4y);
-                }
-                placed = false;
-                L1 = false;
-                L2 = false;
-                L3 = false;
-                L4 = false;
-            }
-
-        }
-        console.log(xPos);
-        console.log(yPos);
-        add = true;
-    }
-}
 
 

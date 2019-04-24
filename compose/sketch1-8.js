@@ -48,7 +48,12 @@ var opacity;
 var playbutton = document.getElementById("playkey");
 playbutton.addEventListener("click", switchtoPlay);
 
-window.addEventListener('touchstart', touched);
+window.addEventListener('touchstart', handleTouch);
+function handleTouch(evt) {
+    touched();
+    evt.preventDefault();
+    console.log("handled")
+}
 
 function preload() {
     bird1 = loadImage('assets/bird1.png');

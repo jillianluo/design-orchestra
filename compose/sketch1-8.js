@@ -13,9 +13,9 @@ var yPos = [];
 var add = true;
 //horizontal lines
 var L1y = 100;
-var L2y = 250;
-var L3y = 400;
-var L4y = 550;
+var L2y = 220;
+var L3y = 340;
+var L4y = 460;
 //waveform initiation state
 var initiated = false;
 //waveform positions

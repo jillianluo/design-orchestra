@@ -113,8 +113,11 @@ function draw() {
         }
     }
 
-    if (play) {
+    if (touches == 1) {
+        touched();
+    }
 
+    if (play) {
         background(250, 50);
         runTime = frameCount - startFrame;
 
@@ -247,7 +250,7 @@ function draw() {
     }
 }
 
-if (touches == 1) {
+function touched() {
     if (compose) {
         //deleting notes
         for (let i = 0; i < xPos.length; i++) {

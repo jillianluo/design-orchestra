@@ -247,7 +247,7 @@ function draw() {
     }
 }
 
-function mouseClicked() {
+if (touches == 1) {
     if (compose) {
         //deleting notes
         for (let i = 0; i < xPos.length; i++) {

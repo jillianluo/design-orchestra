@@ -83,6 +83,7 @@ function setup() {
 }
 
 function draw() {
+    console.log(touches);
     if (compose) {
         background(250);
         stroke(waveColor1);

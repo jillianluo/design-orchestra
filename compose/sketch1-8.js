@@ -115,6 +115,7 @@ function draw() {
 
     if (touches == 1) {
         touched();
+        console.log("touched");
     }
 
     if (play) {

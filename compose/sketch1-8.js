@@ -6,7 +6,7 @@ var placed = false;
 var L1 = false;
 var L2 = false;
 var L3 = false;
-var L4 = false;
+var L5 = false;
 var xPos = [];
 var yPos = [];
 //add or delete

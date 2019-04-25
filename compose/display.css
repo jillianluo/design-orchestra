@@ -5,10 +5,9 @@ body {
 #playkey {
     cursor: pointer;
     position: relative;
-    top: 750px;
+    top: 650px;
     left: 48%;
     display: inline;
-
 }
 
 #playtext {

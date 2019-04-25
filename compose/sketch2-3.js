@@ -367,56 +367,57 @@ function touchStarted() {
             } else if (mouseY > fixY12 - 50 && mouseY < fixY12 + 50) {
                 placed = true;
                 landOn12 = true;
-
-                //add x and y position to the array, align y position on the line
-                if (placed) {
-                    xPos.push(mouseX);
-                    if (landOn1) {
-                        yPos.push(fixY1);
-                    } else if (landOn2) {
-                        yPos.push(fixY2);
-                    } else if (landOn3) {
-                        yPos.push(fixY3);
-                    } else if (landOn4) {
-                        yPos.push(fixY4);
-                    } else if (landOn5) {
-                        yPos.push(fixY5);
-                    } else if (landOn6) {
-                        yPos.push(fixY6);
-                    } else if (landOn7) {
-                        yPos.push(fixY7);
-                    } else if (landOn8) {
-                        yPos.push(fixY8);
-                    } else if (landOn9) {
-                        yPos.push(fixY9);
-                    } else if (landOn10) {
-                        yPos.push(fixY10);
-                    } else if (landOn11) {
-                        yPos.push(fixY11);
-                    } else if (landOn12) {
-                        yPos.push(fixY12);
-                    }
-                    placed = false;
-                    landOn1 = false;
-                    landOn2 = false;
-                    landOn3 = false;
-                    landOn4 = false;
-                    landOn5 = false;
-                    landOn6 = false;
-                    landOn7 = false;
-                    landOn8 = false;
-                    landOn9 = false;
-                    landOn10 = false;
-                    landOn11 = false;
-                    landOn12 = false;
-                }
-
             }
-            console.log(xPos);
-            console.log(yPos);
-            add = true;
+
+            //add x and y position to the array, align y position on the line
+            if (placed) {
+                xPos.push(mouseX);
+                if (landOn1) {
+                    yPos.push(fixY1);
+                } else if (landOn2) {
+                    yPos.push(fixY2);
+                } else if (landOn3) {
+                    yPos.push(fixY3);
+                } else if (landOn4) {
+                    yPos.push(fixY4);
+                } else if (landOn5) {
+                    yPos.push(fixY5);
+                } else if (landOn6) {
+                    yPos.push(fixY6);
+                } else if (landOn7) {
+                    yPos.push(fixY7);
+                } else if (landOn8) {
+                    yPos.push(fixY8);
+                } else if (landOn9) {
+                    yPos.push(fixY9);
+                } else if (landOn10) {
+                    yPos.push(fixY10);
+                } else if (landOn11) {
+                    yPos.push(fixY11);
+                } else if (landOn12) {
+                    yPos.push(fixY12);
+                }
+                placed = false;
+                landOn1 = false;
+                landOn2 = false;
+                landOn3 = false;
+                landOn4 = false;
+                landOn5 = false;
+                landOn6 = false;
+                landOn7 = false;
+                landOn8 = false;
+                landOn9 = false;
+                landOn10 = false;
+                landOn11 = false;
+                landOn12 = false;
+            }
+
         }
-        return false;
+        console.log(xPos);
+        console.log(yPos);
+        add = true;
     }
+    return false;
+}
 
 

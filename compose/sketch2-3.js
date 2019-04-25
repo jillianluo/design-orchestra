@@ -57,6 +57,7 @@ var opacity;
 //switch to play screen when button is pushed
 var playbutton = document.getElementById("playkey");
 playbutton.addEventListener("touchstart", switchtoPlay);
+playbutton.addEventListener("click", switchtoPlay);
 
 function preload() {
     bird1 = loadImage('assets/bird1.png');

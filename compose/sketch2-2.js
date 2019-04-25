@@ -13,9 +13,9 @@ var yPos = [];
 var add = true;
 //horizontal lines
 var L1y = 100;
-var L2y = 250;
-var L3y = 400;
-var L4y = 550;
+var L2y = 240;
+var L3y = 380;
+var L4y = 520;
 //waveform initiation state
 var initiated = false;
 //waveform positions
@@ -115,7 +115,7 @@ function draw() {
 
     if (play) {
 
-        background(250, 1);
+        background(250, 25);
         runTime = frameCount - startFrame;
 
         if (runTime < 60) {

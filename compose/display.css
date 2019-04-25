@@ -8,7 +8,7 @@ body {
     position: relative;
     top: 0px;
     right: 0px;
-    display: inline;
+    display: inline-block;
 }
 
 #playtext {

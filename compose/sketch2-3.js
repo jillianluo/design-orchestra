@@ -77,6 +77,11 @@ function preload() {
     city2 = loadImage('assets/city2.png');
     city3 = loadImage('assets/city3.png');
     city4 = loadImage('assets/city4.png');
+
+    ocean1 = loadImage('assets/ocean1.png');
+    ocean2 = loadImage('assets/ocean2.png');
+    ocean3 = loadImage('assets/ocean3.png');
+    ocean4 = loadImage('assets/ocean4.png');
 }
 
 function switchtoPlay() {
@@ -176,16 +181,16 @@ function draw() {
             }
 
             if (yPos[i] == fixY9) {
-                image(bird1, xPos[i], yPos[i]);
+                image(ocean1, xPos[i], yPos[i]);
             }
             if (yPos[i] == fixY10) {
-                image(bird2, xPos[i], yPos[i]);
+                image(ocean2, xPos[i], yPos[i]);
             }
             if (yPos[i] == fixY11) {
-                image(bird3, xPos[i], yPos[i]);
+                image(ocean3, xPos[i], yPos[i]);
             }
             if (yPos[i] == fixY12) {
-                image(bird4, xPos[i], yPos[i]);
+                image(ocean4, xPos[i], yPos[i]);
             }
         }
     }

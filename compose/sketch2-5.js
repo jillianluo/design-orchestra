@@ -330,41 +330,40 @@ function draw() {
                     tint(255, opa);
                 }
                 if (yPos[i] == fixY1) {
-                    image(bird1, xPos[i], yPos[i]);
+                    image(bird1, xPos[i], fixY1);
                 }
                 if (yPos[i] == fixY2) {
-                    image(bird2, xPos[i], yPos[i]);
+                    image(bird2, xPos[i], fixY2);
                 }
                 if (yPos[i] == fixY3) {
-                    image(bird3, xPos[i], yPos[i]);
+                    image(bird3, xPos[i], fixY3);
                 }
                 if (yPos[i] == fixY4) {
-                    image(bird4, xPos[i], yPos[i]);
+                    image(bird4, xPos[i], fixY4);
                 }
-
                 if (yPos[i] == fixY5) {
-                    image(city1, xPos[i], yPos[i]);
+                    image(city1, xPos[i], fixY1);
                 }
                 if (yPos[i] == fixY6) {
-                    image(city2, xPos[i], yPos[i]);
+                    image(city2, xPos[i], fixY2);
                 }
                 if (yPos[i] == fixY7) {
-                    image(city3, xPos[i], yPos[i]);
+                    image(city3, xPos[i], fixY3);
                 }
                 if (yPos[i] == fixY8) {
-                    image(city4, xPos[i], yPos[i]);
+                    image(city4, xPos[i], fixY4);
                 }
                 if (yPos[i] == fixY9) {
-                    image(ocean1, xPos[i], yPos[i]);
+                    image(ocean1, xPos[i], fixY1);
                 }
                 if (yPos[i] == fixY10) {
-                    image(ocean2, xPos[i], yPos[i]);
+                    image(ocean2, xPos[i], fixY2);
                 }
                 if (yPos[i] == fixY11) {
-                    image(ocean3, xPos[i], yPos[i]);
+                    image(ocean3, xPos[i], fixY3);
                 }
                 if (yPos[i] == fixY12) {
-                    image(ocean4, xPos[i], yPos[i]);
+                    image(ocean4, xPos[i], fixY4);
                 }
                 if (frameCount - cueTime[i] > 45) {
                     cued = false;

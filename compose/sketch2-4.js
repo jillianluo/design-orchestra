@@ -320,112 +320,112 @@ function draw() {
 function touchMoved() {
 
 }
-function touchStarted() {
-    if (compose) {
-        //deleting notes
-        for (let i = 0; i < xPos.length; i++) {
-            if (dist(mouseX, mouseY, xPos[i], yPos[i]) < 25) {
-                xPos.splice(i, 1);
-                yPos.splice(i, 1);
-                add = false;
-            }
-        }
-        //adding notes
-        if (add) {
-            //decide the note goes on which line
+// function touchStarted() {
+//     if (compose) {
+//         //deleting notes
+//         for (let i = 0; i < xPos.length; i++) {
+//             if (dist(mouseX, mouseY, xPos[i], yPos[i]) < 25) {
+//                 xPos.splice(i, 1);
+//                 yPos.splice(i, 1);
+//                 add = false;
+//             }
+//         }
+//         //adding notes
+//         if (add) {
+//             //decide the note goes on which line
 
-            //bird
-            if (mouseY > fixY1 - 50 && mouseY < fixY1 + 50) {
-                placed = true;
-                landOn1 = true;
-            } else if (mouseY > fixY2 - 50 && mouseY < fixY2 + 50) {
-                placed = true;
-                landOn2 = true;
-            } else if (mouseY > fixY3 - 50 && mouseY < fixY3 + 50) {
-                placed = true;
-                landOn3 = true;
-            } else if (mouseY > fixY4 - 50 && mouseY < fixY4 + 50) {
-                placed = true;
-                landOn4 = true;
-            }
-            //city
-            if (mouseY > fixY5 - 50 && mouseY < fixY5 + 50) {
-                placed = true;
-                landOn5 = true;
-            } else if (mouseY > fixY6 - 50 && mouseY < fixY6 + 50) {
-                placed = true;
-                landOn6 = true;
-            } else if (mouseY > fixY7 - 50 && mouseY < fixY7 + 50) {
-                placed = true;
-                landOn7 = true;
-            } else if (mouseY > fixY8 - 50 && mouseY < fixY8 + 50) {
-                placed = true;
-                landOn8 = true;
-            }
-            //beach
-            if (mouseY > fixY9 - 50 && mouseY < fixY9 + 50) {
-                placed = true;
-                landOn9 = true;
-            } else if (mouseY > fixY10 - 50 && mouseY < fixY10 + 50) {
-                placed = true;
-                landOn10 = true;
-            } else if (mouseY > fixY11 - 50 && mouseY < fixY11 + 50) {
-                placed = true;
-                landOn11 = true;
-            } else if (mouseY > fixY12 - 50 && mouseY < fixY12 + 50) {
-                placed = true;
-                landOn12 = true;
-            }
+//             //bird
+//             if (mouseY > fixY1 - 50 && mouseY < fixY1 + 50) {
+//                 placed = true;
+//                 landOn1 = true;
+//             } else if (mouseY > fixY2 - 50 && mouseY < fixY2 + 50) {
+//                 placed = true;
+//                 landOn2 = true;
+//             } else if (mouseY > fixY3 - 50 && mouseY < fixY3 + 50) {
+//                 placed = true;
+//                 landOn3 = true;
+//             } else if (mouseY > fixY4 - 50 && mouseY < fixY4 + 50) {
+//                 placed = true;
+//                 landOn4 = true;
+//             }
+//             //city
+//             if (mouseY > fixY5 - 50 && mouseY < fixY5 + 50) {
+//                 placed = true;
+//                 landOn5 = true;
+//             } else if (mouseY > fixY6 - 50 && mouseY < fixY6 + 50) {
+//                 placed = true;
+//                 landOn6 = true;
+//             } else if (mouseY > fixY7 - 50 && mouseY < fixY7 + 50) {
+//                 placed = true;
+//                 landOn7 = true;
+//             } else if (mouseY > fixY8 - 50 && mouseY < fixY8 + 50) {
+//                 placed = true;
+//                 landOn8 = true;
+//             }
+//             //beach
+//             if (mouseY > fixY9 - 50 && mouseY < fixY9 + 50) {
+//                 placed = true;
+//                 landOn9 = true;
+//             } else if (mouseY > fixY10 - 50 && mouseY < fixY10 + 50) {
+//                 placed = true;
+//                 landOn10 = true;
+//             } else if (mouseY > fixY11 - 50 && mouseY < fixY11 + 50) {
+//                 placed = true;
+//                 landOn11 = true;
+//             } else if (mouseY > fixY12 - 50 && mouseY < fixY12 + 50) {
+//                 placed = true;
+//                 landOn12 = true;
+//             }
 
-            //add x and y position to the array, align y position on the line
-            if (placed) {
-                xPos.push(mouseX);
-                if (landOn1) {
-                    yPos.push(fixY1);
-                } else if (landOn2) {
-                    yPos.push(fixY2);
-                } else if (landOn3) {
-                    yPos.push(fixY3);
-                } else if (landOn4) {
-                    yPos.push(fixY4);
-                } else if (landOn5) {
-                    yPos.push(fixY5);
-                } else if (landOn6) {
-                    yPos.push(fixY6);
-                } else if (landOn7) {
-                    yPos.push(fixY7);
-                } else if (landOn8) {
-                    yPos.push(fixY8);
-                } else if (landOn9) {
-                    yPos.push(fixY9);
-                } else if (landOn10) {
-                    yPos.push(fixY10);
-                } else if (landOn11) {
-                    yPos.push(fixY11);
-                } else if (landOn12) {
-                    yPos.push(fixY12);
-                }
-                placed = false;
-                landOn1 = false;
-                landOn2 = false;
-                landOn3 = false;
-                landOn4 = false;
-                landOn5 = false;
-                landOn6 = false;
-                landOn7 = false;
-                landOn8 = false;
-                landOn9 = false;
-                landOn10 = false;
-                landOn11 = false;
-                landOn12 = false;
-            }
+//             //add x and y position to the array, align y position on the line
+//             if (placed) {
+//                 xPos.push(mouseX);
+//                 if (landOn1) {
+//                     yPos.push(fixY1);
+//                 } else if (landOn2) {
+//                     yPos.push(fixY2);
+//                 } else if (landOn3) {
+//                     yPos.push(fixY3);
+//                 } else if (landOn4) {
+//                     yPos.push(fixY4);
+//                 } else if (landOn5) {
+//                     yPos.push(fixY5);
+//                 } else if (landOn6) {
+//                     yPos.push(fixY6);
+//                 } else if (landOn7) {
+//                     yPos.push(fixY7);
+//                 } else if (landOn8) {
+//                     yPos.push(fixY8);
+//                 } else if (landOn9) {
+//                     yPos.push(fixY9);
+//                 } else if (landOn10) {
+//                     yPos.push(fixY10);
+//                 } else if (landOn11) {
+//                     yPos.push(fixY11);
+//                 } else if (landOn12) {
+//                     yPos.push(fixY12);
+//                 }
+//                 placed = false;
+//                 landOn1 = false;
+//                 landOn2 = false;
+//                 landOn3 = false;
+//                 landOn4 = false;
+//                 landOn5 = false;
+//                 landOn6 = false;
+//                 landOn7 = false;
+//                 landOn8 = false;
+//                 landOn9 = false;
+//                 landOn10 = false;
+//                 landOn11 = false;
+//                 landOn12 = false;
+//             }
 
-        }
-        console.log(xPos);
-        console.log(yPos);
-        add = true;
-    }
-    return false;
-}
+//         }
+//         console.log(xPos);
+//         console.log(yPos);
+//         add = true;
+//     }
+//     return false;
+// }
 
 

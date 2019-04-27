@@ -99,6 +99,7 @@ function switchtoPlay() {
 //canvas
 function setup() {
     createCanvas(windowWidth, 1850);
+    frameRate(10);
     wave1Color1 = color(65, 123, 90);
     wave2Color1 = color(116, 156, 117);
     wave3Color1 = color(178, 189, 126);
@@ -369,7 +370,6 @@ function draw() {
             }
         }
     }
-    console.log(frameRate());
 }
 
 function touchMoved() {

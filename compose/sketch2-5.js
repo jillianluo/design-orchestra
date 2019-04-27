@@ -319,6 +319,8 @@ function draw() {
                 cueTime[i] = map(xPos[i], 0, windowWidth, 1200, 1800);
             }
 
+            console.log(cueTime[i]);
+
             if (abs(cueTime[i] - runTime) <= 60) {
                 cued = true;
             }

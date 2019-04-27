@@ -94,10 +94,6 @@ function switchtoPlay() {
     background(250);
     console.log(compose);
     console.log(play);
-    for (let i = 0; i < xPos.length; i++) {
-        cueTime[i] = map(xPos[i], 0, windowWidth, 0, 300);
-    }
-    console.log(cueTime);
 }
 
 //canvas
@@ -312,7 +308,7 @@ function draw() {
 
         }
 
-        //draw icons
+        //calculate cue time and draw icons
         for (let i = 0; i < xPos.length; i++) {
             if (yPos[i] < 600) {
                 cueTime[i] = map(xPos[i], 0, windowWidth, 0, 599);
@@ -373,6 +369,7 @@ function draw() {
             }
         }
     }
+    console.log(frameRate());
 }
 
 function touchMoved() {

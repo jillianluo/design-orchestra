@@ -97,6 +97,7 @@ function switchtoPlay() {
     background(250);
     console.log(compose);
     console.log(play);
+    document.getElementById.style.animation = "show 3s";
 }
 
 //canvas

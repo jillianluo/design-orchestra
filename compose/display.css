@@ -9,8 +9,16 @@ body {
     background: url("assets/bg.png");
     height: 1280px;
     width: 6827px;
+    visibility: hidden;
 }
-
+@keyframes show {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
 @keyframes slide {
     from {
         transform: translateX(0px);

@@ -83,7 +83,7 @@ function preload() {
     ocean3 = loadImage('assets/ocean3.png');
     ocean4 = loadImage('assets/ocean4.png');
 
-    //bg = loadImage('assets/bg.png');
+    bg = loadImage('assets/bg.png');
 }
 
 function switchtoPlay() {
@@ -97,7 +97,7 @@ function switchtoPlay() {
     background(250);
     console.log(compose);
     console.log(play);
-    document.getElementById.style.animation = "show 3s";
+    document.getElementById("bgimage").style.animation = "slide 3s";
 }
 
 //canvas

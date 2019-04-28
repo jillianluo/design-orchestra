@@ -9,14 +9,7 @@ body {
     background-image: url("assets/bg.png");
     /* visibility: hidden; */
 }
-@keyframes show {
-    from {
-        visibility: hidden;
-    }
-    to {
-        visibility: visible;
-    }
-}
+
 @keyframes slide {
     from {
         transform: translateX(0px);

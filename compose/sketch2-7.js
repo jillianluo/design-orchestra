@@ -200,7 +200,7 @@ function draw() {
 
         //background(250, 25);
         imageMode(CORNER);
-        image(bg, 0, 0);
+        image(bg, 0, -100);
         imageMode(CENTER);
 
         runTime = frameCount - startFrame;

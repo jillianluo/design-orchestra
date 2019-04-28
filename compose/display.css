@@ -3,6 +3,12 @@ body {
     margin: 0;
     background: #fafafa;
     font-family: mrs-eaves-roman-small-caps, sans-serif;
+    overflow-x: hidden;
+}
+#bgimage {
+    background: url("assets/bg.png");
+    height: 1280px;
+    width: 6827px;
 }
 #maintitle {
     font-size: 2.5em;

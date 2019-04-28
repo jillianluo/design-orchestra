@@ -83,7 +83,7 @@ function preload() {
     ocean3 = loadImage('assets/ocean3.png');
     ocean4 = loadImage('assets/ocean4.png');
 
-    bg = loadImage('assets/bg.png');
+    //bg = loadImage('assets/bg.png');
 }
 
 function switchtoPlay() {
@@ -197,10 +197,8 @@ function draw() {
 
     if (play) {
 
-        background(250, 25);
-        imageMode(CORNER);
-        image(bg, 0, 0);
-        imageMode(CENTER);
+        //background(250, 25);
+
         runTime = frameCount - startFrame;
         //starting wave transition
         if (runTime < 60) {

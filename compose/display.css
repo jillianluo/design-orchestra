@@ -7,7 +7,7 @@ body {
 }
 #bgimage {
     background-image: url("assets/bg.png");
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 @keyframes show {
     from {

@@ -83,7 +83,7 @@ function preload() {
     ocean3 = loadImage('assets/ocean3.png');
     ocean4 = loadImage('assets/ocean4.png');
 
-    bg = loadImage('assets/bg.png');
+    bg = loadImage('assets/bg1.png');
 }
 
 function switchtoPlay() {

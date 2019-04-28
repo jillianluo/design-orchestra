@@ -199,6 +199,9 @@ function draw() {
     if (play) {
 
         //background(250, 25);
+        imageMode(CORNER);
+        image(bg, 0, 0);
+        imageMode(CENTER);
 
         runTime = frameCount - startFrame;
         //starting wave transition

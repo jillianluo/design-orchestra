@@ -7,8 +7,6 @@ body {
 }
 #bgimage {
     background: url("assets/bg.png");
-    height: 1280px;
-    width: 6827px;
     visibility: hidden;
 }
 @keyframes show {

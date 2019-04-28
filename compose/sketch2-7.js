@@ -97,7 +97,6 @@ function switchtoPlay() {
     background(250);
     console.log(compose);
     console.log(play);
-    document.getElementById("bgimage").style.animation = "slide 3s";
 }
 
 //canvas

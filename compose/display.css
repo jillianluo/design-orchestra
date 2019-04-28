@@ -5,10 +5,9 @@ body {
 }
 #playkey {
     cursor: pointer;
-    position: relative;
-    top: 0px;
-    right: 0px;
-    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5%;
 }
 
 #playtext {

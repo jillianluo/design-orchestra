@@ -102,7 +102,7 @@ function switchtoPlay() {
 //canvas
 function setup() {
     createCanvas(windowWidth, 1950);
-    frameRate(10);
+    frameRate(30);
     wave1Color1 = color(65, 123, 90);
     wave2Color1 = color(116, 156, 117);
     wave3Color1 = color(178, 189, 126);
@@ -202,6 +202,17 @@ function draw() {
         // image(bg, 0, 0);
         // imageMode(CENTER);
 
+        //draw background
+        imageMode(CORNER);
+        if (runTime < 600) {
+            image(bg, 0, 0);
+        } else if (runTime < 1300) {
+            image(bg, -1280, 0);
+        } else if (runTime < 2000) {
+            image(bg, -2560, 0);
+        }
+        imageMode(CENTER);
+
         runTime = frameCount - startFrame;
         //starting wave transition
         if (runTime < 60) {
@@ -277,11 +288,6 @@ function draw() {
         //draw waves
         for (let i = 0; i < windowWidth; i++) {
             if (runTime < 600) {
-
-                imageMode(CORNER);
-                image(bg, -2560, 0);
-                imageMode(CENTER);
-
                 //wave
                 stroke(wave1Color1);
                 point(waveX1[i], waveY1[i]);
@@ -301,9 +307,6 @@ function draw() {
                 stroke(lerpColor(wave4Color1, wave4Color2, (runTime - 599) / 100));
                 point(waveX4[i], waveY4[i]);
             } else if (runTime < 1300) {
-                imageMode(CORNER);
-                image(bg, -1280, 0);
-                imageMode(CENTER);
                 stroke(wave1Color2);
                 point(waveX1[i], waveY1[i]);
                 stroke(wave2Color2);
@@ -322,9 +325,6 @@ function draw() {
                 stroke(lerpColor(wave4Color2, wave4Color3, (runTime - 1299) / 100));
                 point(waveX4[i], waveY4[i]);
             } else if (runTime < 2000) {
-                imageMode(CORNER);
-                image(bg, -2560, 0);
-                imageMode(CENTER);
                 stroke(wave1Color3);
                 point(waveX1[i], waveY1[i]);
                 stroke(wave2Color3);

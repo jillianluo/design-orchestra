@@ -202,6 +202,8 @@ function draw() {
         // image(bg, 0, 0);
         // imageMode(CENTER);
 
+        runTime = frameCount - startFrame;
+
         //draw background
         imageMode(CORNER);
         if (runTime < 600) {
@@ -213,7 +215,6 @@ function draw() {
         }
         imageMode(CENTER);
 
-        runTime = frameCount - startFrame;
         //starting wave transition
         if (runTime < 60) {
 

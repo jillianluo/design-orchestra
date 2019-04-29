@@ -197,7 +197,7 @@ function draw() {
 
     if (play) {
 
-        //background(250, 25);
+        background(250, 25);
         // imageMode(CORNER);
         // image(bg, 0, 0);
         // imageMode(CENTER);
@@ -279,7 +279,7 @@ function draw() {
             if (runTime < 600) {
 
                 imageMode(CORNER);
-                image(bg, 0, 0);
+                image(bg, -2560, 0);
                 imageMode(CENTER);
 
                 //wave

@@ -110,7 +110,7 @@ function switchtoPlay() {
 
 //canvas
 function setup() {
-    createCanvas(windowWidth, 1950);
+    createCanvas(windowWidth, 2500);
     frameRate(30);
     wave1Color1 = color(65, 123, 90);
     wave2Color1 = color(116, 156, 117);

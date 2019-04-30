@@ -20,20 +20,20 @@ var yPos = [];
 //add or delete
 var add = true;
 //horizontal lines
-var fixY1 = 80;
-var fixY2 = 220;
-var fixY3 = 360;
-var fixY4 = 500;
+var fixY1 = 90;
+var fixY2 = 290;
+var fixY3 = 490;
+var fixY4 = 690;
 
-var fixY5 = 700;
-var fixY6 = 840;
-var fixY7 = 980;
-var fixY8 = 1120;
+var fixY5 = 890;
+var fixY6 = 1090;
+var fixY7 = 1290;
+var fixY8 = 1490;
 
-var fixY9 = 1320;
-var fixY10 = 1460;
-var fixY11 = 1600;
-var fixY12 = 1740;
+var fixY9 = 1690;
+var fixY10 = 1890;
+var fixY11 = 2090;
+var fixY12 = 2290;
 //waveform initiation state
 var initiated = false;
 //waveform positions
@@ -416,7 +416,7 @@ function draw() {
                 if (yPos[i] == fixY12) {
                     image(ocean4, xPos[i], fixY4);
                 }
-                if (runTime - cueTime[i] > 60) {
+                if (runTime - cueTime[i] > 45) {
                     cued = false;
                 }
             }

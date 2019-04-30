@@ -206,7 +206,7 @@ function draw() {
 
     if (play) {
 
-        //background(250, 25);
+        background(250);
         // imageMode(CORNER);
         // image(bg, 0, 0);
         // imageMode(CENTER);

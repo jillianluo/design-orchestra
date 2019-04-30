@@ -376,10 +376,10 @@ function draw() {
                     opa = round(map(cueTime[i] - runTime, 60, 0, 0, 255));
                     tint(255, opa);
                 }
-                // if (cueTime[i] - runTime < -30) {
-                //     opa = round(map(cueTime[i] - runTime, -30, -60, 255, 0));
-                //     tint(255, opa);
-                // }
+                if (cueTime[i] - runTime < -30 && cueTime[i] - runTime > -60) {
+                    opa = round(map(cueTime[i] - runTime, -30, -60, 255, 0));
+                    tint(255, opa);
+                }
                 if (yPos[i] == fixY1) {
                     image(bird1, xPos[i], fixY1);
                 }

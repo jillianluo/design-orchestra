@@ -222,15 +222,15 @@ function draw() {
         } else if (runTime < 600) {
             image(bg, 0, 0);
         } else if (runTime < 700) {
-            let bgX = map(runTime, 600, 699, 0, -1280);
+            let bgX = map(runTime, 600, 699, 0, -1600);
             image(bg, bgX, 0);
         } else if (runTime < 1300) {
-            image(bg, -1280, 0);
+            image(bg, -1600, 0);
         } else if (runTime < 1400) {
-            let bgX = map(runTime, 1300, 1399, -1280, -2560);
+            let bgX = map(runTime, 1300, 1399, -1600, -3200);
             image(bg, bgX, 0);
         } else if (runTime < 2000) {
-            image(bg, -2560, 0);
+            image(bg, -3200, 0);
         }
         imageMode(CENTER);
 

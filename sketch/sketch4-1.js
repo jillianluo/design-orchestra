@@ -76,21 +76,21 @@ playbutton.addEventListener("click", switchtoPlay);
 
 function preload() {
   bird1 = loadImage("assets/bird1.png");
-  bird2 = loadImage("/assets/bird2.png");
-  bird3 = loadImage("/assets/bird3.png");
-  bird4 = loadImage("/assets/bird4.png");
+  bird2 = loadImage("assets/bird2.png");
+  bird3 = loadImage("assets/bird3.png");
+  bird4 = loadImage("assets/bird4.png");
 
-  city1 = loadImage("../assets/city1.png");
-  city2 = loadImage("../assets/city2.png");
-  city3 = loadImage("../assets/city3.png");
-  city4 = loadImage("../assets/city4.png");
+  city1 = loadImage("assets/city1.png");
+  city2 = loadImage("assets/city2.png");
+  city3 = loadImage("assets/city3.png");
+  city4 = loadImage("assets/city4.png");
 
-  ocean1 = loadImage("../assets/ocean1.png");
-  ocean2 = loadImage("../assets/ocean2.png");
-  ocean3 = loadImage("../assets/ocean3.png");
-  ocean4 = loadImage("../assets/ocean4.png");
+  ocean1 = loadImage("assets/ocean1.png");
+  ocean2 = loadImage("assets/ocean2.png");
+  ocean3 = loadImage("assets/ocean3.png");
+  ocean4 = loadImage("assets/ocean4.png");
 
-  bg = loadImage("../assets/bg.png");
+  bg = loadImage("assets/bg.png");
 }
 
 function switchtoPlay() {

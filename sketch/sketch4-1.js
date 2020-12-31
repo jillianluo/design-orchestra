@@ -75,10 +75,10 @@ playbutton.addEventListener("touchstart", switchtoPlay);
 playbutton.addEventListener("click", switchtoPlay);
 
 function preload() {
-  bird1 = loadImage("../assets/bird1.png");
-  bird2 = loadImage("../assets/bird2.png");
-  bird3 = loadImage("../assets/bird3.png");
-  bird4 = loadImage("../assets/bird4.png");
+  bird1 = loadImage("/assets/bird1.png");
+  bird2 = loadImage("/assets/bird2.png");
+  bird3 = loadImage("/assets/bird3.png");
+  bird4 = loadImage("/assets/bird4.png");
 
   city1 = loadImage("../assets/city1.png");
   city2 = loadImage("../assets/city2.png");
